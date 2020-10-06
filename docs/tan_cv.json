@@ -1,0 +1,81 @@
+{
+	"name": "Tanmoy Karmokar",
+	"age": "27 years",
+	"objective": "Python Developer",
+	"personal_info": {
+		"address": "Parel, Mumbai - 400012",
+		"phone": "+917045273671",
+		"email": "tkarmokar32@gmail.com",
+		"date_of_birth": "11th April 1993",
+		"linkedin": "https://www.linkedin.com/in/tanmoy-karmokar-4178918b"
+	},
+	"interests": [
+		"Teach Programming to individuals who are keen on learning",
+		"Listening to Vocal Trance"
+	],
+	"education": [
+		{
+			"university": "University of Mumbai",
+			"degree_college": "Bharti Vidyapeeth College of Engineering",
+			"stream": "Computer Engineering",
+			"cgpa": "7.04 CGPA"
+		}
+	],
+	"skills": {
+		"programming_languages": [
+			"Python", "Php", "Javascript", "C++", "Ruby", "Bash"
+		],
+		"databases": [
+			"MySQL", "PostgreSQL", "Oracle", "MongoDB"
+		],
+		"api": "Python Flask Framework",
+		"tools/platform": [
+			"Oracle VirtualBox", "Postman", "GitHub", "Heroku", "AWS"
+		]
+	},
+	"experience": [
+		{
+			"role": "Python Software Developer",
+			"timeline": "2018 (October) - Present",
+			"company": "Route Mobile Pvt. Ltd.",
+			"tasks": [
+				"Working as a Backend Developer integrating Facebook's WhatsApp Business API to create Route Mobile's WhatsApp Business Solution offering.",
+				"Working on creating custom webhook solutions for interactive WhatsApp chatbots.",
+				"Internal System Automation and Alert for WhatsApp and Slack using Python."
+			]
+		},
+		{
+			"role": "Junior Software Developer",
+			"timeline": "2017 (July)- 2018 (October)",
+			"company": "Valuepitch E-Technologies Pvt. Ltd.",
+			"tasks": [
+				"Created Report Generation Tool to migrate old client reports and create new client reports as well.",
+				"Data Scraping using Python.",
+				"Created various MIS of different systems.",
+				"Internal Systems Automation using Python."
+			]
+		},
+		{
+			"role": "Associate Consultant",
+			"timeline": "2017 (6 months)",
+			"company": "Valuepitch E-Technologies Pvt. Ltd.",
+			"tasks": [
+				"Learnt about Cognos BI Tool, Oracle SQL Developer",
+				"Edelweiss GWM Project Reports ETL and Data Validation using PL-SQL"
+			]
+		}
+	],
+	"internships": [
+		{
+			"project": "My Home Physio Website",
+			"timeline": "2015 (3 months)",
+			"description": "Physiotherapist.",
+			"tech": {
+				"programming_language": "Php",
+				"database": "MySQL",
+				"ui_framework/library": "Bootstrap 3, Jquery",
+				"server": "Apache"
+			}
+		}
+	]
+}
