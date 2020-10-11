@@ -1,8 +1,9 @@
 {
 	"name": "Tanmoy Karmokar",
 	"age": "27 years",
-	"objective": "Python Developer",
-	"personal_info": {
+	"about": "Your Regular Bio Nerd who fell in love with Python programming.",
+	"designation": "Backend Developer",
+	"contact": {
 		"address": "Parel, Mumbai - 400012",
 		"phone": "+917045273671",
 		"email": "tkarmokar32@gmail.com",
@@ -10,11 +11,12 @@
 		"linkedin": "https://www.linkedin.com/in/tanmoy-karmokar-4178918b"
 	},
 	"interests": [
-		"Teach Programming to individuals who are keen on learning",
+		"Teach Programming to keen individuals",
 		"Listening to Vocal Trance"
 	],
 	"education": [
 		{
+			"timeline": "2012-2016",
 			"university": "University of Mumbai",
 			"degree_college": "Bharti Vidyapeeth College of Engineering",
 			"stream": "Computer Engineering",
@@ -69,7 +71,7 @@
 		{
 			"project": "My Home Physio Website",
 			"timeline": "2015 (3 months)",
-			"description": "Physiotherapist.",
+			"description": "Online Physiotherapist Services Booking Platform.",
 			"tech": {
 				"programming_language": "Php",
 				"database": "MySQL",

@@ -7,6 +7,7 @@ import json
 from datetime import datetime
 from flask import Flask, request, current_app as c_app, send_file
 from flask_restful import Resource
+from middleware.decorators import is_valid_token
 
 # Class Definitions:
 

@@ -11,6 +11,7 @@ import multiprocessing
 from datetime import datetime
 from flask import Flask, request, current_app as c_app, send_file
 from flask_restful import Resource
+from middleware.decorators import is_valid_token
 
 # Class Definitions:
 
@@ -29,6 +30,7 @@ class System(Resource):
 		self.bad_code = 400
 		self.exception_code = 500
 
+	@is_valid_token
 	def get(self):
 		'''
 		'''
@@ -39,7 +41,7 @@ class System(Resource):
 				"version": platform.version(),
 				"architecture": ' '.join(platform.architecture()),
 				"cpu_cores": multiprocessing.cpu_count(),
-				"python_version": sys.version,
+				"python_version": sys.version.replace('\n',''),
 			}
 			response = {
 				"meta": self.meta,

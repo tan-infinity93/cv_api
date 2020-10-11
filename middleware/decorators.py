@@ -34,19 +34,6 @@ def is_valid_token(func):
 				response = token_details
 				kwargs['_id'] = token_details.get('_id')
 
-				account_type = token_details.get("account_type")
-				account_scope = c_app.config.get('SCOPES').get(account_type)
-
-				# print(f'account_scope: {account_scope}')
-
-				if request.path not in account_scope:
-					response = {
-						'message': 'unable to process request', 
-						'status': 'failure', 
-						'reason': f'{account_type} user does not have sufficient permissions'
-					}
-					return response, forbidden_error_code, response_headers
-
 			except ExpiredSignatureError as e:
 				response = {'message': 'unable to process request', 'error': str(e), 'reason': 'jwt token expired'}
 				return response, auth_error_code, response_headers
