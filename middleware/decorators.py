@@ -32,7 +32,7 @@ def is_valid_token(func):
 				token_details = jwt.decode(auth_token, key, algorithms=['HS256'])
 				print(f'token_details: {token_details}\n')
 				response = token_details
-				kwargs['_id'] = token_details.get('_id')
+				# kwargs['_id'] = token_details.get('_id')
 
 			except ExpiredSignatureError as e:
 				response = {'message': 'unable to process request', 'error': str(e), 'reason': 'jwt token expired'}
