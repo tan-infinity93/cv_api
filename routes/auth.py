@@ -64,6 +64,7 @@ class Auth(Resource):
 			if username == 'tan-infinity93' and password == 'm@broSonu2002':
 				key = c_app.config.get('SECRET_KEY')
 				headers = {'kid': secrets.token_hex(10)}
+				post_data.pop('password')
 				post_data.update(
 					{
 						'exp': time.time() + 86400
@@ -75,7 +76,7 @@ class Auth(Resource):
 
 				response = {
 					"meta": self.meta,
-					"token_data": token_data
+					"token": token_data
 				}
 				return response, self.success_code, self.headers
 
