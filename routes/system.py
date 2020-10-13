@@ -42,6 +42,18 @@ class System(Resource):
 				"architecture": ' '.join(platform.architecture()),
 				"cpu_cores": multiprocessing.cpu_count(),
 				"python_version": sys.version.replace('\n',''),
+				"backend": {
+					"programming_language": "Python",
+					"framework": "Flask",
+					"database": "None",
+					"wsgi_server": "Gunicorn",
+					"web_server": "Heroku Vegur",
+				},
+				"frontend": {
+					"programming_language": "Javascript",
+					"ui_framework": "VueJS",
+					"middleware": "Express"
+				}
 			}
 			response = {
 				"meta": self.meta,
