@@ -19,12 +19,16 @@ def create_app(config_name):
 
 	# from bindings.flask_mongo import FlaskMongo
 	# from bindings.flask_logger import FlaskLogger
+	from bindings.flask_sqlalchemy import FlaskSqlAlchemy
 
 	# mongo_app = FlaskMongo()
 	# mongo_app.init_app(app)
 
 	# log_app = FlaskLogger()
 	# log_app.init_app(app)
+
+	sqlalchemy_app = FlaskSqlAlchemy()
+	sqlalchemy_app.init_app(app)
 
 	api = Api(app, catch_all_404s=True)
 

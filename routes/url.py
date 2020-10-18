@@ -11,6 +11,7 @@ import random
 from datetime import datetime
 from flask import Flask, request, current_app as c_app, redirect, make_response
 from flask_restful import Resource
+from app.models import UrlShorten
 from middleware.decorators import is_valid_token
 
 # Class Definitions:
@@ -34,22 +35,23 @@ class UrlShortener(Resource):
 		'''
 		'''
 		try:
-			short_url = {
-				"DKZF3TYH": "https://www.youtube.com/watch?v=KR0g-1hnQPA"
-			}
-
 			args_data = request.args.to_dict()
-			url = args_data.get('url', 'www.google.com')
-			long_url = short_url.get(url)
+			url = args_data.get('url')
 
-			# response = {
-			# 	"meta": self.meta,
-			# 	"system_data": system_data
-			# }
-			response = make_response(redirect(long_url, code=302))
-			response.headers['X-Parachutes'] = 'parachutes are cool'
-			return response
-			return redirect(long_url, code=302), self.success_code, self.headers
+			url_obj = UrlShorten()
+			url_data = url_obj.find({'short_url': url}, one=True)
+			long_url = url_data.get('url')
+
+			if url_data:
+				response = make_response(redirect(long_url, code=302))
+				response.headers['X-Parachutes'] = 'parachutes are cool'
+				return response
+			else:
+				response = {
+					"meta": self.meta,
+					"message": "no long url is present for such short code"
+				}
+				return response, self.success_code, self.headers
 
 		except Exception as e:
 			raise e
@@ -69,6 +71,15 @@ class UrlShortener(Resource):
 			short_url = ''.join(
 				random.choices(string.ascii_uppercase + string.digits, k = length)
 			)
+
+			# Save Data in DB:
+
+			db_obj = UrlShorten()
+			db_obj.url = url
+			db_obj.length = length
+			db_obj.short_url = short_url
+			db_obj.save()
+
 			url_data = {
 				"url": url,
 				"length": length,
