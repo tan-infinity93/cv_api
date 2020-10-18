@@ -36,6 +36,7 @@ def create_app(config_name):
 	from routes.cv import CV
 	from routes.system import System
 	from routes.auth import Auth
+	from routes.url import UrlShortener
 
 	# api.add_resource(ReportsCreator, '/edu/v1/utils/pdfs/create', methods=['POST'], endpoint='g_pdf')
 
@@ -43,5 +44,7 @@ def create_app(config_name):
 	api.add_resource(CV, '/cv/v1/cv-info', methods=['GET'], endpoint='cv_info')
 	api.add_resource(System, '/cv/v1/system-info', methods=['GET'], endpoint='sys_info')
 	api.add_resource(Auth, '/cv/v1/token-create', methods=['POST'], endpoint='create_token')
+	api.add_resource(UrlShortener, '/cv/v1/shorten-url', methods=['POST'], endpoint='create_short_url')
+	api.add_resource(UrlShortener, '/cv/v1/redirect-url', methods=['GET'], endpoint='redirect_url')
 
 	return app
