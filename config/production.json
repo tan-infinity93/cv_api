@@ -1,9 +1,10 @@
 {
 	"SECRET_KEY": "xbdbad_()*(bwqdk@1ww",
 	"LOGGER_NAME": "cv_api.log",
+	"DB_URL": "postgres://tan-pc:m@broSonu2002@localhost:5432/tan_cv",
 	"PROJECT_NAME": "cv_api",
-	"ENV": "production",
+	"ENV": "development",
 	"HOST": "127.0.0.1",
 	"PORT": 5000,
-	"DEBUG": false
+	"DEBUG": true
 }
