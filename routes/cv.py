@@ -26,7 +26,7 @@ class CV(Resource):
 		self.bad_code = 400
 		self.exception_code = 500
 
-	@is_valid_token
+	# @is_valid_token
 	def get(self):
 		'''
 		'''
