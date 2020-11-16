@@ -27,8 +27,8 @@ def create_app(config_name):
 	# log_app = FlaskLogger()
 	# log_app.init_app(app)
 
-	sqlalchemy_app = FlaskSqlAlchemy()
-	sqlalchemy_app.init_app(app)
+	# sqlalchemy_app = FlaskSqlAlchemy()
+	# sqlalchemy_app.init_app(app)
 
 	api = Api(app, catch_all_404s=True)
 
