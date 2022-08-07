@@ -6,6 +6,7 @@
 import os
 import sys
 import json
+import traceback
 import platform
 import multiprocessing
 from datetime import datetime
@@ -30,7 +31,7 @@ class System(Resource):
 		self.bad_code = 400
 		self.exception_code = 500
 
-	@is_valid_token
+	# @is_valid_token
 	def get(self):
 		'''
 		'''
@@ -62,7 +63,7 @@ class System(Resource):
 			return response, self.success_code, self.headers
 
 		except Exception as e:
-			raise e
+			traceback.print_exc()
 			response = {
 				"meta": self.meta,
 				"message": "unable to process request"

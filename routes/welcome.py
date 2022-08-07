@@ -3,6 +3,7 @@
 
 # Import Modules:
 
+import traceback
 from datetime import datetime
 from flask import Flask, request, current_app as c_app
 from flask_restful import Resource
@@ -35,6 +36,7 @@ class Welcome(Resource):
 			return response, self.success_code, self.headers
 
 		except Exception as e:
+			traceback.print_exc()
 			response = {
 				"meta": self.meta,
 				"message": "unable to process request"

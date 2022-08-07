@@ -54,7 +54,7 @@ class UrlShortener(Resource):
 				return response, self.success_code, self.headers
 
 		except Exception as e:
-			raise e
+			traceback.print_exc()
 			response = {
 				"meta": self.meta,
 				"message": "unable to process request"
@@ -92,7 +92,7 @@ class UrlShortener(Resource):
 			return response, self.success_code, self.headers
 
 		except Exception as e:
-			raise e
+			traceback.print_exc()
 			response = {
 				"meta": self.meta,
 				"message": "unable to process request"
