@@ -1,8 +1,8 @@
 {
 	"name": "Tanmoy Karmokar",
-	"age": "27 years",
+	"age": "29 years",
 	"about": "Your Regular Bio Nerd who fell in love with Python programming.",
-	"designation": "Backend Developer",
+	"designation": "Backend Development Team Lead",
 	"contact": {
 		"address": "Parel, Mumbai - 400012",
 		"phone": "+917045273671",
@@ -25,7 +25,7 @@
 	],
 	"skills": {
 		"programming_languages": [
-			"Python", "Php", "Javascript", "C++", "Ruby", "Bash"
+			"Python", "Php", "Javascript", "C++", "Bash"
 		],
 		"databases": [
 			"MySQL", "PostgreSQL", "Oracle", "MongoDB"
@@ -37,7 +37,7 @@
 	},
 	"experience": [
 		{
-			"role": "Python Software Developer",
+			"role": "Backend Developer",
 			"timeline": "2018 (October) - Present",
 			"company": "Route Mobile Pvt. Ltd.",
 			"tasks": [
